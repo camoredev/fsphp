@@ -1,0 +1,3 @@
+<?php
+
+define("COUSER", "FSPHP");
