@@ -24,3 +24,18 @@ function calcImc()
 
     return number_format($imc, 2);
 }
+
+function payTotal($price)
+{
+
+    static $total;
+    $total += $price;
+    return "<p> Total a pagar é R$" . number_format($total, 2, ",", ".") . "</p>";
+}
+
+function myTeam()
+{
+    $teamName = func_get_args();
+    $teamCout = func_num_args();
+    return ["name" => $teamName,"cout" => $teamCout];
+}
