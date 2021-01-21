@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__ . '/../../fullstackphp/fsphp.php';
 fullStackPHPClassName("03.02 - Funções para strings");
 

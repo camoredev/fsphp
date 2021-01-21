@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__ . '/../../fullstackphp/fsphp.php';
 fullStackPHPClassName("02.04 - Variáveis e tipos de dados");
 
@@ -62,9 +63,9 @@ $e = null;
 
 var_dump($a, $b, $c, $d, $e);
 
-if ($a || $b || $c || $d || $e){
+if ($a || $b || $c || $d || $e) {
     var_dump(true);
-} else{
+} else {
     var_dump(false);
 };
 
@@ -79,7 +80,7 @@ $codeClear = call_user_func("strip_tags", $code);
 
 var_dump($code, $codeClear);
 
-$codeMore = function ($code){
+$codeMore = function ($code) {
     var_dump($code);
 };
 
