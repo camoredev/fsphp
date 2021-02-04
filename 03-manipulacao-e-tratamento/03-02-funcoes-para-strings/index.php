@@ -8,6 +8,21 @@ fullStackPHPClassName("03.02 - Funções para strings");
  */
 fullStackPHPClassSession("strings e multibyte", __LINE__);
 
+$string = "O último show do AC/DC foi incrível!";
+
+echo "<pre>";
+var_dump([
+    "string" => $string,
+    "strlen" => strlen($string),
+    "mb_atrlen" => mb_strlen($string),
+    "substr" => substr($string, 9),
+    "mb_substr" => mb_substr($string, 9),
+    "strtoupper" => strtoupper($string),
+    "mb_strtoupper" => mb_strtoupper($string)
+]);
+
+echo "</pre>";
+
 
 /**
  * [ conversão de caixa ] https://php.net/manual/en/function.mb-convert-case.php
