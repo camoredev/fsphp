@@ -65,7 +65,11 @@ asort($assoc);
 
 //ordenação por indices(chaves)
 ksort($index);//ordenação crescente
-krsort($index);//ordenação descrescente
+krsort($index);//ordenação decrescente
+
+//reindexar a array
+sort($index);//reidexação de forma crescente
+rsort($index);// reindexação de forma decrescente
 
 
 echo "<pre>";
@@ -80,8 +84,47 @@ echo "</pre>";
  */
 fullStackPHPClassSession("verificação", __LINE__);
 
+echo "<pre>";
+var_dump([
+    array_keys($assoc),
+    array_values($assoc)
+]);
+echo "</pre>";
 
+//condição usando a função in_array para byscar um determinado valor
+if (in_array("AC/DC", $assoc)) {
+    echo "<p> Cause i'm back!</p>";
+};
+
+$arrTorString = implode(", ", $assoc);
+
+echo "<p>Eu curto {$arrTorString} e muitas outras</p>";
+echo "<p>{$arrTorString}</p>";
+
+var_dump(explode(", ", $arrTorString));
 /**
  * [ exemplo prático ] um template view | implode
  */
 fullStackPHPClassSession("exemplo prático", __LINE__);
+
+$profile = [
+    "name" => "Caio Moraes",
+    "company" => "Camoredev",
+    "mail" => "contato@camoredev.com"
+];
+
+$template = <<< TPL
+    <article>
+        <h1>{{name}}</h1>
+        <p>{{company}}</br>
+        <a href = "" >Enviar E-mail</a></p>
+    </article>
+TPL;
+
+echo $templete;
+
+echo str_replace(
+    array_keys($profile),
+    array_values($profile),
+    $template
+);
